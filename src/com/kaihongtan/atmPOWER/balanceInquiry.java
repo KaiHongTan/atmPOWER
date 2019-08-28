@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import java.text.DecimalFormat;
 
 public class balanceInquiry extends JFrame{
-
+		//Declare buttons
 	    private JButton number1;
 	    private JButton number5;
 	    private JButton number6;
@@ -29,6 +29,7 @@ public class balanceInquiry extends JFrame{
 		private JLabel background1;
 	DecimalFormat fmt = new DecimalFormat("0.00");
 		public static double balanceMoney = 1000.00;
+		boolean richornot = true;
 	    public balanceInquiry() {
 	    	super("KonG Bank");
 			background1 = new JLabel(
@@ -46,8 +47,8 @@ public class balanceInquiry extends JFrame{
 	        number9 = new JButton ("9");
 	        number00 = new JButton ("00");
 	        number0 = new JButton ("0");
-	        numberBackspace = new JButton ("←");
-	        numberTick = new JButton ("✔");
+	        numberBackspace = new JButton ("â†�");
+	        numberTick = new JButton ("âœ”");
 	        insertCard = new JButton ("BACK");
 			topLabel = new JLabel ("Your Balance is");
 			rmLabel = new JLabel ("RM");
@@ -111,6 +112,10 @@ public class balanceInquiry extends JFrame{
 			balanceLabel.setFont(new Font("Sans Serif", Font.PLAIN,32));
 			interpretLabel.setFont(new Font("Sans Serif", Font.PLAIN,24));
 	        balanceLabel.setText(fmt.format(balanceMoney));
+	        
+
+
+			
 	        setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
 	        pack();
 	        setResizable(false);
